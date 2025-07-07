@@ -10,8 +10,12 @@
   <script src="sae303.js"></script>
 </head>
 <body>
+
   <nav class="navigation">
-    <ul class="nav-list">
+    <button class="hamburger" id="hamburger-menu" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-list">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-list" id="nav-list">
       <li><a href="#intro" class="nav-link">Introduction</a></li>
       <li><a href="#chap1" class="nav-link">Chapitre 1</a></li>
       <li><a href="#chap2" class="nav-link">Chapitre 2</a></li>
@@ -19,8 +23,17 @@
       <li><a href="#conclusion" class="nav-link">Conclusion</a></li>
     </ul>
   </nav>
+  <script>
+    const hamburger = document.getElementById('hamburger-menu');
+    const navList = document.getElementById('nav-list');
+    hamburger.addEventListener('click', function() {
+      navList.classList.toggle('open');
+      hamburger.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', navList.classList.contains('open'));
+    });
+  </script>
 
-  <header id="intro"  class="header-section" class="chapter fade-in-section">
+  <header id="intro" class="header-section">
     <h1>Inégalités de genre dans le monde du travail au Pacifique</h1>
     <p class="intro">
       <strong>Dans les pays insulaires du Pacifique, moins de 10 % des sièges parlementaires sont occupés par des femmes dans plusieurs nations.</strong><br>
@@ -28,8 +41,19 @@
     </p>
   </header>
 
+  
   <main>
-    <section class="chapter fade-in-section" id="chap1">
+
+    <section class="video-intro">
+    <h2 class="video-title" style="text-align: center;">Vidéo d'introduction</h2>
+    <p class="video-caption" style="text-align:center;">Découvrez en animation les enjeux de l’égalité de genre dans le monde du travail au Pacifique.</p>
+    <video controls poster="votre-image-poster.jpg" width="100%" style="max-width:700px;display:block;margin:0 auto;">
+      <source src="SAE303.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la vidéo HTML5.
+    </video>
+  </section>
+
+    <section class="chapter" id="chap1">
       <h2>Chapitre 1 : Accès aux postes de responsabilité</h2>
       <h3>Une sous-représentation marquée des femmes</h3>
       <p>
@@ -43,7 +67,7 @@
       <div id="manager-detail" class="chart-detail">Graphique : Proportion de femmes dans les postes de management (2021) et dans les parlements (2024) pour les Fidji, Vanuatu, Kiribati, Îles Marshall, Tonga et Tuvalu.</div>
     </section>
 
-    <section class="chapter fade-in-section" id="chap2">
+    <section class="chapter" id="chap2">
       <h2>Chapitre 2 : L’écart salarial dans le Pacifique</h2>
       <h3>Des disparités économiques persistantes</h3>
       <p>
@@ -57,7 +81,7 @@
       <div id="salary-detail" class="chart-detail">Graphique : Indice de parité salariale (2015-2021) pour Vanuatu, Kiribati, Îles Marshall, Tonga et Tuvalu.</div>
     </section>
 
-    <section class="chapter fade-in-section" id="chap3">
+    <section class="chapter" id="chap3">
       <h2>Chapitre 3 : Les causes des inégalités</h2>
       <h3>Des facteurs culturels et structurels</h3>
       <p>
@@ -71,7 +95,7 @@
       <div id="parliament-detail" class="chart-detail">Graphique : Proportion de femmes dans les parlements (2000-2024) pour les Fidji, Vanuatu, Kiribati, Îles Marshall, Tonga et Tuvalu.</div>
     </section>
 
-    <section class="chapter conclusion fade-in-section" id="conclusion">
+    <section class="chapter conclusion" id="conclusion">
       <h2>Conclusion : Vers un avenir équitable</h2>
       <p>
         <strong>L’égalité de genre dans le Pacifique est un impératif pour le développement durable.</strong>
@@ -86,5 +110,11 @@
       </p>
     </section>
   </main>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <span>Inégalités de genre dans le Pacifique</span>
+      <span>IUT NC - MMI 2 &copy; 2025 | Par Camélia AMIN HANDOYO & Graig MOURY</span>
+    </div>
+  </footer>
 </body>
 </html>

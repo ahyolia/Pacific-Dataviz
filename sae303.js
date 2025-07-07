@@ -381,21 +381,3 @@ document.addEventListener("DOMContentLoaded", () => {
 );
   sections.forEach((section) => observer.observe(section));
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const fadeIns = document.querySelectorAll('.fade-in-section');
-
-  const fadeInObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Ne plus observer une fois visible
-        }
-      });
-    },
-    { threshold: 0.2 } // Dès que 20 % de l’élément est visible
-  );
-
-  fadeIns.forEach(el => fadeInObserver.observe(el));
-});

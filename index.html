@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inégalités de genre dans le travail au Pacifique - Dataviz</title>
+  <link rel="stylesheet" href="sae303.css">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="data.js"></script>
+  <script src="sae303.js"></script>
+</head>
+<body>
+  <nav class="navigation">
+    <ul class="nav-list">
+      <li><a href="#intro" class="nav-link">Introduction</a></li>
+      <li><a href="#chap1" class="nav-link">Chapitre 1</a></li>
+      <li><a href="#chap2" class="nav-link">Chapitre 2</a></li>
+      <li><a href="#chap3" class="nav-link">Chapitre 3</a></li>
+      <li><a href="#conclusion" class="nav-link">Conclusion</a></li>
+    </ul>
+  </nav>
+
+  <header id="intro"  class="header-section" class="chapter fade-in-section">
+    <h1>Inégalités de genre dans le monde du travail au Pacifique</h1>
+    <p class="intro">
+      <strong>Dans les pays insulaires du Pacifique, moins de 10 % des sièges parlementaires sont occupés par des femmes dans plusieurs nations.</strong><br>
+      Ces chiffres reflètent des inégalités de genre persistantes dans le milieu professionnel, limitant l’accès des femmes aux opportunités économiques et aux rôles de décision. Cet article explore les défis, les données clés et les solutions pour promouvoir l’égalité dans la région Pacifique.
+    </p>
+  </header>
+
+  <main>
+    <section class="chapter fade-in-section" id="chap1">
+      <h2>Chapitre 1 : Accès aux postes de responsabilité</h2>
+      <h3>Une sous-représentation marquée des femmes</h3>
+      <p>
+        Dans les pays insulaires du Pacifique, les femmes peinent à accéder aux postes de direction, tant dans le secteur public que privé. Les stéréotypes culturels, les réseaux professionnels limités et les responsabilités domestiques inégales créent un "plafond de verre" difficile à briser.
+      </p>
+      <ul>
+        <li><strong>Représentation parlementaire :</strong> En 2024, les Fidji affichent 9,09 % de femmes dans leur parlement, tandis que Vanuatu stagne à 1,96 %. Tuvalu et Kiribati se situent autour de 6,25-6,67 %.</li>
+        <li><strong>Postes de management :</strong> En 2021, Tonga atteint 35,8 % de femmes dans des postes de direction, contre 33,24 % aux Îles Marshall. Les disparités urbaines/rurales montrent des écarts, avec 45,9 % de femmes managers en milieu urbain à Tonga.</li>
+      </ul>
+      <div id="manager-chart" class="chart"></div>
+      <div id="manager-detail" class="chart-detail">Graphique : Proportion de femmes dans les postes de management (2021) et dans les parlements (2024) pour les Fidji, Vanuatu, Kiribati, Îles Marshall, Tonga et Tuvalu.</div>
+    </section>
+
+    <section class="chapter fade-in-section" id="chap2">
+      <h2>Chapitre 2 : L’écart salarial dans le Pacifique</h2>
+      <h3>Des disparités économiques persistantes</h3>
+      <p>
+        L’écart salarial entre genres reste un obstacle majeur à l’autonomie financière des femmes dans le Pacifique. Les données montrent des variations significatives selon les pays et les zones urbaines/rurales, reflétant des dynamiques économiques et sociales complexes.
+      </p>
+      <ul>
+        <li><strong>Indice de parité salariale (2021) :</strong> Les Îles Marshall affichent un ratio de 1,2 (les femmes gagnent 20 % de moins que les hommes), tandis que Kiribati montre un ratio de 1,11. Tuvalu a le ratio le plus bas à 0,82, indiquant un écart plus marqué.</li>
+        <li><strong>Tendances :</strong> Entre 2015 et 2021, l’écart salarial s’est légèrement réduit à Tonga (de 0,95 à 0,96), mais reste stagnant ou s’aggrave dans d’autres pays comme Tuvalu.</li>
+      </ul>
+      <div id="salary-chart" class="chart"></div>
+      <div id="salary-detail" class="chart-detail">Graphique : Indice de parité salariale (2015-2021) pour Vanuatu, Kiribati, Îles Marshall, Tonga et Tuvalu.</div>
+    </section>
+
+    <section class="chapter fade-in-section" id="chap3">
+      <h2>Chapitre 3 : Les causes des inégalités</h2>
+      <h3>Des facteurs culturels et structurels</h3>
+      <p>
+        Les inégalités de genre dans le Pacifique sont enracinées dans des normes culturelles, des responsabilités familiales inégales et un accès limité à l’éducation et aux réseaux professionnels. Ces facteurs freinent la progression des femmes dans les sphères décisionnelles et économiques.
+      </p>
+      <ul>
+        <li><strong>Éducation et management :</strong> Les femmes de 25-54 ans avec un niveau d’éducation tertiaire occupent 41,4 % des postes de management aux Îles Marshall, mais seulement 26,7 % à Tuvalu, soulignant l’impact de l’éducation.</li>
+        <li><strong>Charge domestique :</strong> Les femmes du Pacifique consacrent souvent plus de temps aux tâches domestiques, limitant leur disponibilité pour des carrières exigeantes.</li>
+      </ul>
+      <div id="parliament-chart" class="chart"></div>
+      <div id="parliament-detail" class="chart-detail">Graphique : Proportion de femmes dans les parlements (2000-2024) pour les Fidji, Vanuatu, Kiribati, Îles Marshall, Tonga et Tuvalu.</div>
+    </section>
+
+    <section class="chapter conclusion fade-in-section" id="conclusion">
+      <h2>Conclusion : Vers un avenir équitable</h2>
+      <p>
+        <strong>L’égalité de genre dans le Pacifique est un impératif pour le développement durable.</strong>
+      </p>
+      <ul>
+        <li>Renforcer l’accès à l’éducation, notamment dans les filières techniques, pour les femmes et les filles.</li>
+        <li>Promouvoir des politiques de quotas pour accroître la représentation féminine dans les parlements et les postes de direction.</li>
+        <li>Sensibiliser les communautés pour déconstruire les stéréotypes de genre et valoriser les modèles féminins.</li>
+      </ul>
+      <p>
+        Des initiatives comme les programmes de mentorat et les politiques d’égalité salariale commencent à porter leurs fruits dans la région. En les amplifiant, le Pacifique peut bâtir un avenir plus inclusif et prospère pour tous.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
